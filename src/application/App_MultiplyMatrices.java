@@ -10,8 +10,8 @@ public class App_MultiplyMatrices {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int lac; //Lines and collums == , because is a square matrice.
-		
+		int lac; //Rows and columns == , because is a square matrix.
+		System.out.print("Choose the number of rows and columns of the Square Matrix: ");
 		lac = sc.nextInt();
 		
 		System.out.println("----------------");
@@ -20,6 +20,7 @@ public class App_MultiplyMatrices {
 		
 		float[][] matriz2 = new float[lac][lac];
 		
+		System.out.println("First Matrix:");
 		for(int i = 0; i<matriz1.length;i++) {
 			for(int c = 0; c<matriz1[i].length;c++) {
 				matriz1[i][c] = sc.nextFloat();
@@ -27,6 +28,7 @@ public class App_MultiplyMatrices {
 		}
 		
 		System.out.println("-----------------");
+		System.out.println("Second Matrix:");
 		
 		for(int i = 0; i<matriz1.length;i++) {
 			for(int c = 0; c<matriz1[i].length;c++) {
@@ -34,11 +36,13 @@ public class App_MultiplyMatrices {
 			}
 		}
 		
-		System.out.println("---------------------");
-		System.out.println(matriz1.length);
-		System.out.println(matriz1[0].length);
+		//System.out.println("---------------------");
+		//System.out.println(matriz1.length);
+		//System.out.println(matriz1[0].length);
 		
 		System.out.println("---------------------");
+		
+		System.out.println("The result is:\n ");
 		
 		float[][] finalMatrice = MultiplyMatrices(matriz1,matriz2);
 		
@@ -48,6 +52,8 @@ public class App_MultiplyMatrices {
 			}
 			System.out.println();
 		}
+		
+		System.out.printf("\nThe number of executions is: %d",(MultiplyMatricesQttInst(matriz1,matriz2)));
 		
 		sc.close();
 
@@ -75,7 +81,7 @@ public class App_MultiplyMatrices {
 				finalMatrice[i][c] = matriz1[i][c] * matriz2[i][c];
 				inst+=1;
 			}
-		}
+		}							// cost execution
 		inst += matriz1.length + 1; // matriz1.lenght == qtt times exec, but no enter on 2º for
 									// +1 == qtt times exec, but no enter on 1º for
 		return inst;
