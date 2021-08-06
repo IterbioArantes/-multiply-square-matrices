@@ -1,2 +1,2 @@
 # -multiply-square-matrices
-code to multiply square matrices and see their cost of execution
+code to: multiply square matrices and execution cost
