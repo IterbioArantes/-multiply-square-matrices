@@ -1,3 +1,2 @@
 # -multiply-square-matrices
-aa
-multiply square matrices and execution cost
+multiply square matrices 
