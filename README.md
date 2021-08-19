@@ -1,2 +1,2 @@
 # -multiply-square-matrices
-code to: multiply square matrices and execution cost
+multiply square matrices and execution cost
